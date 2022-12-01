@@ -1,0 +1,37 @@
+.input-form{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: white;
+    gap: 1rem;
+    border-radius: 15px;
+    padding: 5% 10%;
+    box-sizing: border-box;
+}
+
+.input-form label{
+    font-size: 1.2rem;
+}
+
+.input-form input{
+    width: 50%;
+    height: 2.3rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.input-form button{
+    width: 30%;
+    height: 2.7rem;
+    font-size: 1.2rem;
+    background: green;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.input-form button:hover{
+    filter: brightness(2)
+}

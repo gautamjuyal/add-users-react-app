@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import InputForm from "./components/InputForm";
+import OutputCard from "./components/OutputCard";
+import Navigation from "./components/Navigation";
+import styles from "./App.module.css";
+
+const USERS_ARRAY = [{ name: "abc", age: 22 }];
 
 function App() {
+  const [collectedData, setCollectedData] = useState(USERS_ARRAY);
+  function inputDataSubmission(data) {
+    setCollectedData((prevData) => [data, ...prevData]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <Navigation></Navigation>
+      <InputForm onDataSubmission={inputDataSubmission} />
+      {USERS_ARRAY.length > 0 && <OutputCard data={collectedData} />}
     </div>
   );
 }

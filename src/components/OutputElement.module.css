@@ -1,0 +1,10 @@
+.output-element{
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1rem 0;
+    font-weight: 500;
+    box-sizing: border-box;
+}
