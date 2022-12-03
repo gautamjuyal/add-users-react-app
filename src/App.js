@@ -4,7 +4,7 @@ import OutputCard from "./components/OutputCard";
 import Navigation from "./components/Navigation";
 import styles from "./App.module.css";
 
-const USERS_ARRAY = [{ name: "abc", age: 22 }];
+const USERS_ARRAY = [];
 
 function App() {
   const [collectedData, setCollectedData] = useState(USERS_ARRAY);
