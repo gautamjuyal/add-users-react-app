@@ -16,7 +16,7 @@ function App() {
     <div className={styles.app}>
       <Navigation></Navigation>
       <InputForm onDataSubmission={inputDataSubmission} />
-      {USERS_ARRAY.length > 0 && <OutputCard data={collectedData} />}
+      {collectedData.length > 0 && <OutputCard data={collectedData} />}
     </div>
   );
 }
